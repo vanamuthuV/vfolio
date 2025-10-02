@@ -1,13 +1,13 @@
 export default function Header() {
   return (
-    <header className="flex flex-wrap items-center justify-between bg-primary h-28 p-4">
-      <div className="bg-black py-2 px-4">
-        <span className="text-white text-3xl">VANAMUTHU V</span>
+    <header className="flex flex-wrap items-center justify-between bg-primary md:h-28 md:p-4 p-5">
+      <div className="bg-black py-2 md:px-4 px-2">
+        <span className="text-white md:text-3xl">VANAMUTHU V</span>
       </div>
 
       <nav>
-        <ul className="flex gap-4">
-          <li className="bg-white p-1 rounded-md hover:bg-brand">
+        <ul className="flex flex-row-reverse md:flex-row md:gap-4 gap-2">
+          <li className="bg-white p-1 hidden md:block rounded-md hover:bg-brand">
             <a href="https://github.com/vanamuthuV" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ export default function Header() {
             </a>
           </li>
 
-          <li className="bg-white p-1 rounded-md hover:bg-brand">
+          <li className="bg-white p-1 hidden md:block rounded-md hover:bg-brand">
             <a href="https://www.linkedin.com/in/vanamuthuv/" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,9 @@ export default function Header() {
                 <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
                 <circle cx="12" cy="13" r="2" />
               </svg>
-              <span className="text-md font-semibold">Resume</span>
+              <span className="text-md font-semibold hidden md:block">
+                Resume
+              </span>
             </a>
           </li>
 
@@ -93,7 +95,9 @@ export default function Header() {
                   <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
                   <rect x="2" y="4" width="20" height="16" rx="2" />
                 </svg>
-                <span className="text-md font-semibold">Contact</span>
+                <span className="text-md font-semibold hidden md:block">
+                  Contact
+                </span>
               </button>
             </a>
           </li>

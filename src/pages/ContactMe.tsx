@@ -1,9 +1,20 @@
+import { ContactForm } from "../components/ContactForm";
+
 const ContactMe = () => {
   return (
-    <div id="contact" className="flex flex-col items-center mb-10 justify-center pb-10 bg-primary">
-      <p className="text-3xl font-bold py-5 text-white">Contact Me</p>
-      <ul className="flex items-center justify-center gap-5">
-        <li className="bg-white p-1 rounded">
+    <div
+      id="contact"
+      className="flex flex-col items-center justify-center pb-5 bg-primary"
+    >
+      <p className="md:text-3xl text-xl md:font-bold font-semibold md:py-5 py-2.5 text-white">
+        Contact Me
+      </p>
+
+      <ContactForm />
+
+      <div className="my-5 border-[#d3d3d3] border w-full"></div>
+      <ul className="flex items-center justify-center  md:gap-5 gap-2.5">
+        <li className="bg-white md:p-1 p-0.5 rounded">
           <a href="mailto:vanamuthuvjob@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +34,7 @@ const ContactMe = () => {
           </a>
         </li>
 
-        <li className="bg-white p-1 rounded">
+        <li className="bg-white md:p-1 p-0.5 rounded">
           <a href="https://github.com/vanamuthuV">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +54,7 @@ const ContactMe = () => {
           </a>
         </li>
 
-        <li className="bg-white p-1 rounded">
+        <li className="bg-white md:p-1 p-0.5  rounded">
           <a href="https://www.linkedin.com/in/vanamuthuv/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +75,7 @@ const ContactMe = () => {
           </a>
         </li>
 
-        <li className="bg-white p-1 rounded">
+        <li className="bg-white md:p-1 p-0.5  rounded">
           <a href="https://x.com/VanamuthuV">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +94,7 @@ const ContactMe = () => {
           </a>
         </li>
 
-        <li className="bg-white p-1 rounded">
+        <li className="bg-white md:p-1 p-0.5  rounded">
           <a href="https://discordapp.com/users/vanamuthuv">
             <svg
               xmlns="http://www.w3.org/2000/svg"

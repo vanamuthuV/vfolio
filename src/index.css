@@ -29,3 +29,17 @@
     @apply max-w-full h-auto;
   }
 }
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite ease-in-out;
+}

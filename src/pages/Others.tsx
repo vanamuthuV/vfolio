@@ -15,7 +15,7 @@ const AllTimelines: React.FC = () => {
           <button
             key={group}
             onClick={() => setCurrent(group as any)}
-            className={`flex-1 font-bold py-1 ${
+            className={`flex-1 font-bold cursor-pointer py-1 text-sm md:text-base ${
               current === group ? "bg-black text-white" : "bg-transparent"
             }`}
           >

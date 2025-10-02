@@ -14,7 +14,7 @@ const Timeline: React.FC<Props> = ({ items }) => {
     <div className="flex flex-col gap-4 w-full">
       {items.map((item, index) => (
         <div key={index} className="flex items-start gap-4">
-          <div className="w-[120px] text-sm font-bold">{item.date}</div>
+          <div className="md:w-auto w-[70px] md:text-sm text-[9px] font-bold">{item.date}</div>
 
           <div className="flex-1">{item.content}</div>
         </div>
