@@ -5,14 +5,14 @@ export default function Header() {
   return (
     <header className="flex flex-wrap items-center justify-between bg-primary md:h-28 md:p-4 p-5">
       <section className="flex items-center justify-center gap-2">
-        <div className="group relative md:h-13 md:w-13 h-10 w-10">
+        <div className="group relative md:h-14 md:w-14 h-12 w-12">
           <img
             src={LogoClosed}
-            className="absolute top-0 left-0 md:h-13 md:w-13 w-10 h-10 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
+            className="absolute top-0 left-0 md:h-14 md:w-14 w-12 h-12 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
           />
           <img
             src={LogoOpen}
-            className="absolute top-0 left-0 w-10 h-10 md:h-13 md:w-13 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+            className="absolute top-0 left-0 w-12 h-12 md:h-14 md:w-14 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
           />
         </div>
 
