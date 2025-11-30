@@ -3,6 +3,7 @@ import Loader from "./Loader";
 import { CircleCheck } from "lucide-react";
 
 const ContactForm = () => {
+  const [isEnabled, setEnable] = useState(true);
   const name = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);
   const message = useRef<HTMLTextAreaElement>(null);
@@ -10,6 +11,18 @@ const ContactForm = () => {
   const [status, setStatus] = useState<
     "submit" | "submitting" | "submitted" | "error"
   >("submit");
+
+  const isEmail = (value: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  };
+
+  const handleEnableSubmit = () => {
+    if (isEmail(email.current?.value!)) {
+      setEnable(false);
+    } else {
+      setEnable(true);
+    }
+  };
 
   const handleSubmit = async (
     ev:
@@ -64,6 +77,7 @@ const ContactForm = () => {
 
       <div className="md:w-2/4 w-full flex items-center justify-center">
         <form
+          onChange={handleEnableSubmit}
           onSubmit={(ev: FormEvent<HTMLFormElement>) => handleSubmit(ev)}
           className="md:w-3/4 w-full flex flex-col gap-2 items-center justify-center"
         >
@@ -73,6 +87,7 @@ const ContactForm = () => {
               className="w-full border-2 border-[#584c77] rounded-sm shadow-2xl focus:border-[#584c77] focus:outline-none bg-[#d3d3d3] px-2 py-1"
               type="text"
               placeholder="name"
+              required
             />
           </span>
 
@@ -82,6 +97,7 @@ const ContactForm = () => {
               className="w-full border-2 border-[#584c77] rounded-sm shadow-2xl focus:border-[#584c77] focus:outline-none bg-[#d3d3d3] px-2 py-1"
               type="text"
               placeholder="email"
+              required
             />
           </span>
 
@@ -102,8 +118,11 @@ const ContactForm = () => {
           >
             {status === "submit" ? (
               <button
+                disabled={isEnabled}
                 type="submit"
-                className="bg-[#d3d3d3] cursor-pointer w-full rounded-sm border-2 border-[#584c77] py-2 text-[#584c77]"
+                className={`bg-[#d3d3d3] w-full rounded-sm border-2 border-[#584c77] py-2 text-[#584c77] ${
+                  isEnabled ? "cursor-not-allowed" : "cursor-pointer"
+                }`}
               >
                 Submit
               </button>

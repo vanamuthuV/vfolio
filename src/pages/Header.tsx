@@ -1,9 +1,25 @@
+import LogoClosed from "../../public/logoclosed.webp"
+import LogoOpen from "../../public/logoopen.webp"
+
 export default function Header() {
   return (
     <header className="flex flex-wrap items-center justify-between bg-primary md:h-28 md:p-4 p-5">
-      <div className="bg-black py-2 md:px-4 px-2">
-        <span className="text-white md:text-3xl">VANAMUTHU V</span>
-      </div>
+      <section className="flex items-center justify-center gap-2">
+        <div className="group relative md:h-13 md:w-13 h-10 w-10">
+          <img
+            src={LogoClosed}
+            className="absolute top-0 left-0 md:h-13 md:w-13 w-10 h-10 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
+          />
+          <img
+            src={LogoOpen}
+            className="absolute top-0 left-0 w-10 h-10 md:h-13 md:w-13 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+          />
+        </div>
+
+        <div className="bg-black py-2 md:px-4 px-2">
+          <span className="text-white md:text-3xl">VANAMUTHU V</span>
+        </div>
+      </section>
 
       <nav>
         <ul className="flex flex-row-reverse md:flex-row md:gap-4 gap-2">
